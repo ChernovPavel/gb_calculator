@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalcNumberBtnStyle">
+        <item name="android:layout_width">@dimen/calc_btn_width</item>
+        <item name="android:layout_height">@dimen/calc_btn_height</item>
+        <item name="android:layout_margin">@dimen/calc_btn_margin</item>
+        <item name="android:layout_weight">@dimen/calc_btn_weight</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="rippleColor">@color/white</item>
+        <item name="cornerRadius">@dimen/calc_btn_corner_radius</item>
+    </style>
+
+    <style name="CalcNumberBtnStyle.OperationsBtn">
+        <item name="android:backgroundTint">@color/orange</item>
+    </style>
+</resources>
