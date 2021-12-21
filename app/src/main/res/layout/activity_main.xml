@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -39,14 +38,8 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_ac"
-                android:layout_width="@dimen/calc_btn_width"
-                android:layout_height="@dimen/calc_btn_height"
-                android:layout_margin="@dimen/calc_btn_margin"
-                android:backgroundTint="@color/light_grey"
-                android:text="@string/ac"
-                android:textColor="@color/black"
-                android:textSize="@dimen/button_text_size"
-                app:cornerRadius="@dimen/calc_btn_corner_radius" />
+                style="@style/CalcNumberBtnStyle.AcBtn"
+                android:text="@string/ac" />
 
         </LinearLayout>
 

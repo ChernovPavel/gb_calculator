@@ -9,11 +9,17 @@
         <item name="android:textSize">@dimen/button_text_size</item>
         <item name="rippleColor">@color/white</item>
         <item name="cornerRadius">@dimen/calc_btn_corner_radius</item>
-
         <item name="backgroundTint">?attr/myNumberButtonColor</item>
     </style>
 
     <style name="CalcNumberBtnStyle.OperationsBtn">
         <item name="backgroundTint">?attr/myOperationsButtonColor</item>
+    </style>
+
+    <style name="CalcNumberBtnStyle.AcBtn">
+        <item name="backgroundTint">?attr/myAcButtonColor</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_weight">@dimen/calc_btn_weight_zero</item>
+
     </style>
 </resources>

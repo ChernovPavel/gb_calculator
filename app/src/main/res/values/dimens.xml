@@ -7,6 +7,7 @@
     <dimen name="calc_btn_height">@dimen/wrap_content</dimen>
     <dimen name="calc_btn_margin">10dp</dimen>
     <dimen name="calc_btn_weight">1</dimen>
+    <dimen name="calc_btn_weight_zero">0</dimen>
     <dimen name="calc_btn_corner_radius">15dp</dimen>
 
     <item name="wrap_content" format="integer" type="dimen">-2</item>
