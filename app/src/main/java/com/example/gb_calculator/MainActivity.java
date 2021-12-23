@@ -1,5 +1,6 @@
 package com.example.gb_calculator;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Constants {
 
     public static final String EXPRESSION = "EXPRESSION";
     private static StringBuffer expression = new StringBuffer();
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
 
         Button btn1 = findViewById(R.id.button_1);
@@ -116,5 +118,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable(EXPRESSION, expression);
+    }
+
+    private int getAppTheme() {
+        return codeStyleToRStyleId(getCodeStyle(FIRST_THEME));
+    }
+
+    private int getCodeStyle(int defaultCodeStyle) {
+        SharedPreferences sharedPref = getSharedPreferences(NAME_SHARED_PREFS, MODE_PRIVATE);
+        return sharedPref.getInt(APP_THEME, defaultCodeStyle);
+    }
+
+    private int codeStyleToRStyleId(int codeStyle) {
+        switch (codeStyle) {
+            case SECOND_THEME:
+                return R.style.Theme_Gb_calculatorDark;
+            case FIRST_THEME:
+            default:
+                return R.style.Theme_Gb_calculatorLight;
+        }
     }
 }

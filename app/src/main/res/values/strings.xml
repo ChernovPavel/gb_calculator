@@ -18,4 +18,7 @@
     <string name="result">=</string>
     <string name="multiplication">×</string>
     <string name="hint_result">0</string>
+    <string name="light_select_theme">Light</string>
+    <string name="dark_select_theme">Dark</string>
+    <string name="choose_theme">Choose a theme:</string>
 </resources>
